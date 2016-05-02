@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="FreecellFrame">
+		<size>410,650</size>
+		<bg>#008040</bg>
+		<style>wxCAPTION|wxSYSTEM_MENU|wxCLOSE_BOX|wxMINIMIZE_BOX|wxSTATIC_BORDER</style>
+		<object class="wxMenuBar" variable="MenuBar1" member="no">
+			<object class="wxMenu" variable="Menu1" member="no">
+				<label>&amp;File</label>
+				<object class="wxMenuItem" name="idMenuNewGame" variable="MenuItem3" member="yes">
+					<label>New Game</label>
+					<accel>F2</accel>
+					<help>Start a new game</help>
+					<handler function="OnNewGame" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="idRestartGame" variable="MenuItem5" member="yes">
+					<label>Restart Game</label>
+					<accel>Ctrl-R</accel>
+					<handler function="OnRestartGame" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="idResume" variable="MenuItem6" member="yes">
+					<label>Resume Previous Game</label>
+					<handler function="OnResumeGame" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="idCheckTable" variable="MenuItem7" member="yes">
+					<label>Check Table</label>
+					<accel>Ctrl-A</accel>
+					<handler function="OnCheckTable" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="idRefreshTable" variable="MenuItem8" member="yes">
+					<label>Refresh Table</label>
+				</object>
+				<object class="wxMenuItem" name="idMenuUndo" variable="MenuItem4" member="yes">
+					<label>Undo</label>
+					<accel>Ctrl-Z</accel>
+					<handler function="OnUndo" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="idMenuQuit" variable="MenuItem1" member="no">
+					<label>Quit</label>
+					<accel>Alt-F4</accel>
+					<help>Quit the application</help>
+					<handler function="OnQuit" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="Menu3" member="yes">
+				<label>Settings</label>
+				<object class="wxMenuItem" name="idDelayedCleanup" variable="MenuItem9" member="yes">
+					<label>Delayed Cleanup</label>
+					<help>Only send cards to foundation automatically if all tableau piles are sorted</help>
+					<checked>1</checked>
+					<checkable>1</checkable>
+				</object>
+				<object class="wxMenuItem" name="idStrictDelayedCleanup" variable="MenuItem12" member="yes">
+					<label>Strict</label>
+					<help>Delayed Cleanup is strict (i.e. only if sorting is strict)</help>
+					<checked>1</checked>
+					<handler function="OnStrictDelayedCleanupClicked" entry="EVT_MENU" />
+					<checkable>1</checkable>
+				</object>
+				<object class="wxMenuItem" name="idPickFromFoundation" variable="MenuItem10" member="yes">
+					<label>Pick from Foundation</label>
+					<checkable>1</checkable>
+				</object>
+				<object class="wxMenuItem" name="idLazyCounting" variable="MenuItem11" member="yes">
+					<label>&apos;Lazy&apos; empty pile counting</label>
+					<checkable>1</checkable>
+				</object>
+				<object class="wxMenuItem" name="idSaveState" variable="MenuItem13" member="yes">
+					<label>Save State</label>
+					<checkable>1</checkable>
+				</object>
+			</object>
+			<object class="wxMenu" variable="Menu2" member="no">
+				<label>Help</label>
+				<object class="wxMenuItem" name="idMenuAbout" variable="MenuItem2" member="no">
+					<label>About</label>
+					<accel>F1</accel>
+					<help>Show info about this application</help>
+					<handler function="OnAbout" entry="EVT_MENU" />
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBAR1" variable="StatusBar1" member="yes">
+			<fields>4</fields>
+			<widths>-75,-75,-75,-75</widths>
+			<styles>wxSB_NORMAL,wxSB_NORMAL,wxSB_NORMAL,wxSB_NORMAL</styles>
+		</object>
+	</object>
+</wxsmith>
